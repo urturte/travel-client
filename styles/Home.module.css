@@ -97,7 +97,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -125,7 +125,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
@@ -257,7 +257,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .vercelLogo {
     filter: invert(1);
   }
@@ -266,7 +266,7 @@
   .thirteen img {
     filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
-}
+} */
 
 @keyframes rotate {
   from {
@@ -274,5 +274,39 @@
   }
   to {
     transform: rotate(0deg);
+  }
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+.tripsWrapper {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 75px;
+  margin-bottom: 100px;
+}
+.emptyContainer {
+  color: #363636;
+}
+@media only screen and (max-width: 800px) {
+  .tripsWrapper {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .buttonWrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

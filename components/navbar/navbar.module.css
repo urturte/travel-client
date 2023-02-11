@@ -1,0 +1,22 @@
+.main {
+  height: 75px;
+  background-color: #000000c9;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 30px;
+  color: white;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.logo {
+  font-size: 28px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #e2d0c0;
+}
