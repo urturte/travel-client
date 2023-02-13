@@ -25,7 +25,7 @@ const Trip: React.FC<TripType> = ({
   return (
     <div onClick={onClickHandler} className={styles.main}>
       <div className={styles.imgWrapper}>
-        <img className={styles.img} alt="recipe" src={imageUrl}></img>
+        <img className={styles.img} alt="trip" src={imageUrl}></img>
         <h1>{price}$</h1>
       </div>
       <div className={styles.description}>
