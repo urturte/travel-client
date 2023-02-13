@@ -1,6 +1,5 @@
 import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/navbar/Navbar";
-import Footer from "@/components/footer/Footer";
 import Button from "@/components/button/Button";
 import Trip from "@/components/trip/Trip";
 import { useEffect, useState } from "react";
@@ -47,7 +46,6 @@ export default function Home(props: any) {
           })
         )}
       </div>
-      <Footer />
     </div>
   );
 }

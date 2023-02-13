@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "@/components/navbar/Navbar";
-import Footer from "@/components/footer/Footer";
 import { useRouter } from "next/router";
 import styles from "./trip.module.css";
 import Button from "@/components/button/Button";
 
 export async function getServerSideProps(ctx: any) {
-  console.log("ctx", ctx.query.id);
   const { data } = await axios.get(
     ` https://63e3cb19619fce55d4219c6c.mockapi.io/travel/Flights/${ctx.query.id}`
   );
@@ -18,7 +16,7 @@ export async function getServerSideProps(ctx: any) {
   };
 }
 
-export default function RecipePage({ trip: tripData }: any) {
+export default function TripPage({ trip: tripData }: any) {
   const [trip, setTrip] = useState<any>(tripData);
 
   const router = useRouter();
@@ -36,12 +34,14 @@ export default function RecipePage({ trip: tripData }: any) {
             <h4>{trip.date}</h4>
             <h4>Duration: {trip.duration} days</h4>
             <h1>Price: {trip.price} $</h1>
-            <Button text="Book now!" onClick={console.log("clicked")} />
+            <Button
+              text="Book now!"
+              onClick={() => alert("Congratulations! It's a scam.")}
+            />
           </div>
           <img className={styles.mainImage} src={trip.imageUrl} />
         </div>
       )}
-      <Footer />
     </div>
   );
 }
